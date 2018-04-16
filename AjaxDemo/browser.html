@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>XHR Example</title>
+</head>
+
+<body>
+    <p>This example must be run on a server to work properly.</p>
+    <script>
+      
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("get", "http://localhost/AjaxDemo/server.php?q=name", false);
+        xhr.send(null);
+
+        if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+            alert(xhr.statusText);
+            alert(xhr.responseText);
+        } else {
+            alert("Request was unsuccessful: " + xhr.status);
+        }
+    </script>
+</body>
+
+</html>
